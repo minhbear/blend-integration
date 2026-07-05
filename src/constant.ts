@@ -1,0 +1,40 @@
+export enum Network {
+  TESTNET,
+  MAINNET,
+}
+
+export const networks = {
+  [Network.TESTNET]: {
+    passphrase: "Test SDF Network ; September 2015",
+    rpc: "https://soroban-testnet.stellar.org",
+  },
+  [Network.MAINNET]: {
+    passphrase: "Public Global Stellar Network ; September 2015",
+    rpc: "https://mainnet.sorobanrpc.com",
+  },
+};
+
+export const pools: { [key in Network]: { [name: string]: string } } = {
+  [Network.TESTNET]: {
+    TestnetV2: "CCEBVDYM32YNYCVNRXQKDFFPISJJCV557CDZEIRBEE4NCV4KHPQ44HGF",
+  },
+  [Network.MAINNET]: {
+    // Fixed XLM-USDC pool
+    FixedXlmUsdc: "CCLBPEYS3XFK65MYYXSBMOGKUI4ODN5S7SUZBGD7NALUQF64QILLX5B5",
+    YieldBlox: "CBP7NO6F7FRDHSOFQBT2L2UWYIZ2PU76JKVRYAQTG3KZSQLYAOKIF2WB",
+  },
+};
+
+export const assets: { [key in Network]: { [symbol: string]: string } } = {
+  [Network.TESTNET]: {
+    XLM: "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC",
+    USDC: "CAQCFVLOBK5GIULPNZRGATJJMIZL5BSP7X5YJVMGCPTUEPFM4AVSRCJU",
+    BLND: "CB22KRA3YZVCNCQI64JQ5WE7UY2VAV7WFLK6A2JN3HEX56T2EDAFO7QF",
+    wETH: "CAZAQB3D7KSLSNOSQKYD2V4JP5V2Y3B4RDJZRLBFCCIXDCTE3WHSY3UE",
+    wBTC: "CAP5AMC2OHNVREO66DFIN6DHJMPOBAJ2KCDDIMFBR7WWJH5RZBFM3UEI",
+  },
+  [Network.MAINNET]: {
+    XLM: "CAS3J7GYLGXMF6TDJBBYYSE3HQ6BBSMLNUQ34T6TZMYMW2EVH34XOWMA",
+    USDC: "CCW67TSZV3SSS2HXMBQ5JFGCKJNXKZM7UQUWUZPUTHXSTZLEO7SJMI75",
+  },
+};

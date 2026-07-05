@@ -4,6 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "list-pool": "npx ts-node src/list-pool.ts",
+    "faucet": "npx ts-node src/faucet.ts",
+    "deposit": "npx ts-node src/deposit.ts",
+    "borrow": "npx ts-node src/borrow.ts",
+    "repay": "npx ts-node src/repay.ts",
+    "withdraw": "npx ts-node src/withdraw.ts",
+    "position": "npx ts-node src/get-position.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +26,11 @@
   "homepage": "https://github.com/minhbear/blend-integration#readme",
   "devDependencies": {
     "@types/node": "^26.1.0",
+    "dotenv": "^17.4.2",
     "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@blend-capital/blend-sdk": "^3.3.0",
+    "@stellar/stellar-sdk": "^16.0.0"
   }
 }
